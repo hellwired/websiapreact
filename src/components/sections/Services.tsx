@@ -28,11 +28,11 @@ const services = [
     },
     {
         id: 4,
-        title: "Auditoría de Personal",
-        description: "Control continuo y transparente de los procesos administrativos y asistencia en las dependencias.",
+        title: "Portal de Autoservicio",
+        description: "Acceso seguro para empleados a su información personal y recibos.",
         icon: ShieldCheck,
-        color: "text-brand-red",
-        bgColor: "bg-brand-red/10",
+        color: "text-brand-secondary",
+        bgColor: "bg-brand-secondary/10",
     },
 ];
 
@@ -57,7 +57,7 @@ const itemVariants = {
 
 export function Services() {
     return (
-        <section id="servicios" className="py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <section id="servicios" className="py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
             <div className="container mx-auto px-4 md:px-8">
 
                 <div className="text-center max-w-3xl mx-auto mb-16">

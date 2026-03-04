@@ -5,8 +5,9 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
     { name: "Inicio", href: "#" },
+    { name: "Quiénes Somos", href: "#nosotros" },
     { name: "Servicios", href: "#servicios" },
-    { name: "Novedades", href: "#novedades" },
+    { name: "Novedades y Circulares", href: "#novedades" },
     { name: "Contacto", href: "#contacto" },
 ];
 
@@ -19,9 +20,9 @@ export function Navbar() {
                 {/* Brand / Logo */}
                 <div className="flex items-center gap-2">
                     <img
-                        src="/logo.png"
+                        src={`${import.meta.env.BASE_URL}logo.png`}
                         alt="Logo SIAP Misiones"
-                        className="h-10 w-auto object-contain dark:brightness-0 dark:invert transition-all"
+                        className="h-10 w-auto object-contain cursor-pointer dark:brightness-0 dark:invert transition-all"
                     />
                 </div>
 
@@ -32,7 +33,7 @@ export function Navbar() {
                             <li key={link.name}>
                                 <a
                                     href={link.href}
-                                    className="hover:text-brand-blue dark:hover:text-blue-400 transition-colors"
+                                    className="hover:text-brand-primary dark:hover:text-brand-accent transition-colors"
                                 >
                                     {link.name}
                                 </a>
@@ -42,7 +43,7 @@ export function Navbar() {
 
                     <div className="flex items-center gap-2 border-l border-slate-200 dark:border-slate-800 pl-6">
                         <ThemeToggle />
-                        <Button asChild className="hidden lg:inline-flex bg-brand-red hover:bg-[#a01f1f] text-white shadow-sm transition-colors">
+                        <Button asChild className="hidden lg:inline-flex bg-brand-secondary hover:bg-brand-secondary/90 text-white shadow-sm transition-colors">
                             <a href="https://sueldos.siap.misiones.gob.ar/Ingreso/" target="_blank" rel="noopener noreferrer">
                                 Ver Mis Recibos
                             </a>
@@ -67,7 +68,7 @@ export function Navbar() {
                             <li key={link.name}>
                                 <a
                                     href={link.href}
-                                    className="block hover:text-brand-blue dark:hover:text-blue-400"
+                                    className="block hover:text-brand-primary dark:hover:text-brand-accent"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     {link.name}
@@ -75,7 +76,7 @@ export function Navbar() {
                             </li>
                         ))}
                         <li className="pt-2">
-                            <Button asChild className="w-full bg-brand-red hover:bg-[#a01f1f] text-white">
+                            <Button asChild className="w-full bg-brand-secondary hover:bg-brand-secondary/90 text-white">
                                 <a href="https://sueldos.siap.misiones.gob.ar/Ingreso/" target="_blank" rel="noopener noreferrer">
                                     Ver Mis Recibos
                                 </a>

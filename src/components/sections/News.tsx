@@ -53,31 +53,33 @@ export function News() {
                         >
                             <div className="p-6 flex-1 flex flex-col">
                                 <div className="flex items-center gap-2 mb-4">
-                                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-blue/10 text-brand-blue dark:bg-blue-500/10 dark:text-blue-400 uppercase tracking-wide">
+                                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-primary/10 text-brand-primary dark:bg-brand-primary/20 dark:text-brand-accent uppercase tracking-wide">
                                         {item.category}
                                     </span>
                                 </div>
 
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-brand-blue dark:group-hover:text-blue-400 transition-colors">
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-brand-primary dark:group-hover:text-brand-accent transition-colors">
                                     {item.title}
                                 </h3>
 
-                                <div className="flex items-center gap-2 text-sm text-brand-red font-medium mb-4">
+                                <div className="flex items-center gap-2 text-sm text-brand-secondary font-medium mb-4">
                                     <CalendarDays className="h-4 w-4" />
                                     <span>{item.date}</span>
                                 </div>
 
-                                <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1">
+                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 line-clamp-3">
                                     {item.snippet}
                                 </p>
 
-                                <a
-                                    href="#"
-                                    className="inline-flex items-center text-sm font-semibold text-brand-blue dark:text-blue-400 hover:text-brand-blue/80 dark:hover:text-blue-300"
-                                >
-                                    Leer comunicado
-                                    <ArrowRight className="ml-1 h-4 w-4" />
-                                </a>
+                                <div className="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                                    <a
+                                        href="#"
+                                        className="inline-flex items-center text-sm font-semibold text-brand-primary dark:text-brand-accent hover:text-brand-primary/80 dark:hover:text-brand-accent/80"
+                                    >
+                                        Leer comunicado
+                                        <ArrowRight className="ml-1 h-4 w-4" />
+                                    </a>
+                                </div>
                             </div>
                         </article>
                     ))}

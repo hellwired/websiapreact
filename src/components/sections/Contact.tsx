@@ -19,20 +19,22 @@ export function Contact() {
 
                     {/* Información y Vías */}
                     <div className="lg:col-span-5 space-y-8">
-                        <div className="bg-slate-50 dark:bg-slate-950 p-8 rounded-2xl border border-slate-200 dark:border-slate-800">
-                            <h3 className="text-xl font-bold text-brand-blue dark:text-blue-400 mb-6 border-b border-slate-200 dark:border-slate-800 pb-4">
+                        <div className="bg-white dark:bg-slate-950 p-8 rounded-2xl border border-slate-200 dark:border-slate-800">
+                            <h3 className="text-xl font-bold text-brand-primary dark:text-brand-accent mb-6 border-b border-slate-200 dark:border-slate-800 pb-4">
                                 Vías de Comunicación
                             </h3>
                             <ul className="space-y-6">
-                                <li className="flex items-start gap-4">
-                                    <div className="mt-1 bg-slate-200 dark:bg-slate-800 p-2.5 rounded-lg text-slate-700 dark:text-slate-300">
-                                        <MapPin className="h-5 w-5" />
+                                <li className="flex gap-4 items-start">
+                                    <div className="bg-brand-primary/10 dark:bg-brand-primary/20 p-3 rounded-full text-brand-primary dark:text-brand-accent shrink-0">
+                                        <MapPin className="h-6 w-6" />
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-slate-900 dark:text-white">Dirección Central</h4>
-                                        <a href="https://maps.app.goo.gl/xXfcchbcn8mBVL3c6" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 mt-1 hover:text-brand-blue dark:hover:text-blue-400 block transition-colors">
-                                            Sarmiento 1835<br />
-                                            Posadas, Misiones, Argentina. CP N3301
+                                        <h4 className="font-semibold text-slate-900 dark:text-white">Ubicación SIAP</h4>
+                                        <p className="text-slate-600 dark:text-slate-400 mt-1">
+                                            Edificio SIAP, Av. Posadas xxxx<br />Posadas, Misiones
+                                        </p>
+                                        <a href="https://maps.app.goo.gl/xXfcchbcn8mBVL3c6" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 mt-1 hover:text-brand-primary dark:hover:text-brand-accent block transition-colors">
+                                            Ver en Google Maps &rarr;
                                         </a>
                                     </div>
                                 </li>
@@ -43,8 +45,7 @@ export function Contact() {
                                     <div>
                                         <h4 className="font-semibold text-slate-900 dark:text-white">Central Telefónica</h4>
                                         <p className="text-slate-600 dark:text-slate-400 mt-1">
-                                            0800-XXX-SIAP (Línea gratuita)<br />
-                                            0376-4XXXXXX (Línea directa)
+                                            3764446534 (Línea Directa)<br />
                                         </p>
                                     </div>
                                 </li>
@@ -63,7 +64,7 @@ export function Contact() {
                             </ul>
 
                             <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800">
-                                <Button asChild className="w-full bg-brand-red hover:bg-[#a01f1f] text-white">
+                                <Button asChild className="w-full bg-brand-secondary hover:bg-brand-secondary/90 text-white">
                                     <a href="https://sueldos.siap.misiones.gob.ar/Ingreso/" target="_blank" rel="noopener noreferrer">
                                         <FileText className="mr-2 h-4 w-4" />
                                         Ir al Portal de Recibos

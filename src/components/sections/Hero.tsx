@@ -17,7 +17,7 @@ export function Hero() {
                         transition={{ duration: 0.5 }}
                         className="mb-8 flex justify-center"
                     >
-                        <span className="rounded-full bg-brand-blue/10 px-4 py-1.5 text-sm font-semibold text-brand-blue dark:bg-blue-500/10 dark:text-blue-400 border border-brand-blue/20 dark:border-blue-500/20">
+                        <span className="rounded-full bg-brand-primary/10 px-4 py-1.5 text-sm font-semibold text-brand-primary dark:bg-brand-primary/20 dark:text-brand-accent border border-brand-primary/20 dark:border-brand-primary/30">
                             Transformación Digital en Misiones
                         </span>
                     </motion.div>
@@ -26,9 +26,9 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="mb-6 text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl md:text-6xl"
+                        className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight"
                     >
-                        Gestión Eficiente de <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-500">Recursos Humanos</span> y Liquidación de Haberes
+                        Gestión Eficiente de <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">Recursos Humanos</span> y Liquidación de Haberes
                     </motion.h1>
 
                     <motion.p
@@ -46,7 +46,7 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.3 }}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4"
                     >
-                        <Button size="lg" className="w-full sm:w-auto bg-brand-red hover:bg-brand-red/90 text-white text-lg h-12 px-8">
+                        <Button size="lg" className="w-full sm:w-auto bg-brand-secondary hover:bg-brand-secondary/90 text-white text-lg h-12 px-8">
                             Acceso a Autogestión
                             <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>
