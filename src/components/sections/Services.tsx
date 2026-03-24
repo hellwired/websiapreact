@@ -80,7 +80,8 @@ export function Services() {
                         <motion.div
                             key={service.id}
                             variants={itemVariants}
-                            className="bg-white dark:bg-slate-950 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow"
+                            whileHover={{ y: -5, scale: 1.02 }}
+                            className="bg-white dark:bg-slate-950 rounded-2xl p-8 shadow-lg hover:shadow-xl border border-slate-200 dark:border-slate-800 transition-shadow duration-300"
                         >
                             <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${service.bgColor}`}>
                                 <service.icon className={`h-7 w-7 ${service.color}`} />

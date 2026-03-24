@@ -26,7 +26,8 @@ export function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="bg-white dark:bg-slate-900 rounded-2xl p-8 md:p-10 shadow-sm border-l-4 border-l-brand-primary border-y border-r border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition-transform duration-300"
+                        whileHover={{ y: -5, scale: 1.01 }}
+                        className="bg-white dark:bg-slate-900 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl border-l-4 border-l-brand-primary border-y border-r border-slate-200 dark:border-slate-800 transition-shadow duration-300"
                     >
                         <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                             Es un sistema diseñado para alcanzar la máxima eficacia y eficiencia en la <strong>planificación y el control del personal</strong>.
@@ -42,7 +43,8 @@ export function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="bg-white dark:bg-slate-900 rounded-2xl p-8 md:p-10 shadow-sm border-l-4 border-l-brand-accent border-y border-r border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition-transform duration-300"
+                        whileHover={{ y: -5, scale: 1.01 }}
+                        className="bg-white dark:bg-slate-900 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl border-l-4 border-l-brand-accent border-y border-r border-slate-200 dark:border-slate-800 transition-shadow duration-300"
                     >
                         <h3 className="flex items-center gap-3 text-xl font-bold text-brand-secondary dark:text-blue-400 mb-6 border-b border-slate-100 dark:border-slate-800 pb-4">
                             <div className="bg-brand-accent/10 p-2 rounded-lg text-brand-accent">
@@ -86,7 +88,8 @@ export function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.3 }}
-                        className="bg-white dark:bg-slate-900 rounded-2xl p-8 md:p-10 shadow-sm border-l-4 border-l-brand-primary border-y border-r border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition-transform duration-300"
+                        whileHover={{ y: -5, scale: 1.01 }}
+                        className="bg-white dark:bg-slate-900 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl border-l-4 border-l-brand-primary border-y border-r border-slate-200 dark:border-slate-800 transition-shadow duration-300"
                     >
                         <h3 className="flex items-center gap-3 text-xl font-bold text-brand-secondary dark:text-blue-400 mb-6 border-b border-slate-100 dark:border-slate-800 pb-4">
                             <div className="bg-brand-primary/10 p-2 rounded-lg text-brand-primary dark:text-brand-accent">
@@ -123,7 +126,8 @@ export function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="bg-white dark:bg-slate-900 rounded-2xl p-8 md:p-10 shadow-sm border-l-4 border-l-emerald-500 border-y border-r border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition-transform duration-300"
+                        whileHover={{ y: -5, scale: 1.01 }}
+                        className="bg-white dark:bg-slate-900 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl border-l-4 border-l-emerald-500 border-y border-r border-slate-200 dark:border-slate-800 transition-shadow duration-300"
                     >
                         <h3 className="flex items-center gap-3 text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-6 border-b border-slate-100 dark:border-slate-800 pb-4">
                             <div className="bg-emerald-500/10 p-2 rounded-lg text-emerald-600 dark:text-emerald-400">

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { CalendarDays, ArrowRight } from "lucide-react";
 import { Button } from "../ui/Button";
 
@@ -46,10 +47,15 @@ export function News() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {newsItems.map((item) => (
-                        <article
+                    {newsItems.map((item, index) => (
+                        <motion.article
                             key={item.id}
-                            className="flex flex-col border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-lg transition-all dark:bg-slate-900 group"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            whileHover={{ y: -5, scale: 1.02 }}
+                            className="flex flex-col border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-slate-900 group"
                         >
                             <div className="p-6 flex-1 flex flex-col">
                                 <div className="flex items-center gap-2 mb-4">
@@ -81,7 +87,7 @@ export function News() {
                                     </a>
                                 </div>
                             </div>
-                        </article>
+                        </motion.article>
                     ))}
                 </div>
 

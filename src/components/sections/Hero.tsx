@@ -1,14 +1,34 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/Button";
 
 export function Hero() {
-    return (
-        <section className="relative overflow-hidden bg-white dark:bg-slate-950 pt-20 pb-32">
-            {/* Background Decorative Pattern */}
-            <div className="absolute inset-0 z-0 opacity-5 dark:opacity-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+    const ref = useRef<HTMLElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start start", "end start"],
+    });
 
-            <div className="container relative z-10 mx-auto px-4 md:px-8">
+    // Transformaciones espaciales vinculadas al scroll
+    const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+    const yContent = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
+    const opacityContent = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+    const scaleContent = useTransform(scrollYProgress, [0, 1], [1, 0.95]);
+
+    return (
+        <section ref={ref} className="relative overflow-hidden bg-white dark:bg-slate-950 pt-20 pb-32">
+            {/* Background Decorative Pattern con parallax */}
+            <motion.div 
+                style={{ y: yBg }}
+                className="absolute inset-0 z-0 opacity-5 dark:opacity-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
+            ></motion.div>
+
+            {/* Contenedor principal con efectos de scroll espacial */}
+            <motion.div 
+                style={{ y: yContent, opacity: opacityContent, scale: scaleContent }}
+                className="container relative z-10 mx-auto px-4 md:px-8"
+            >
                 <div className="mx-auto max-w-4xl text-center">
 
                     <motion.div
@@ -56,7 +76,7 @@ export function Hero() {
                     </motion.div>
 
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

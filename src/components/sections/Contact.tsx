@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { MapPin, Phone, Clock, FileText } from "lucide-react";
 import { Button } from "../ui/Button";
 
@@ -19,7 +20,14 @@ export function Contact() {
 
                     {/* Información y Vías */}
                     <div className="lg:col-span-5 space-y-8">
-                        <div className="bg-white dark:bg-slate-950 p-8 rounded-2xl border border-slate-200 dark:border-slate-800">
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            whileHover={{ y: -5, scale: 1.01 }}
+                            className="bg-white dark:bg-slate-950 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-200 dark:border-slate-800"
+                        >
                             <h3 className="text-xl font-bold text-brand-primary dark:text-brand-accent mb-6 border-b border-slate-200 dark:border-slate-800 pb-4">
                                 Vías de Comunicación
                             </h3>
@@ -71,12 +79,12 @@ export function Contact() {
                                     </a>
                                 </Button>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
 
                     {/* Mapa Interactivo */}
                     <div className="lg:col-span-7 h-full min-h-[400px]">
-                        <div className="h-full w-full bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 relative shadow-sm">
+                        <div className="h-full w-full bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 relative shadow-lg">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d885.8332223304808!2d-55.8938172!3d-27.365317299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457be337817df63%3A0x7ab729198f57392b!2sSarmiento%201835%2C%20N3301%20Posadas%2C%20Misiones!5e0!3m2!1ses!2sar!4v1772569672196!5m2!1ses!2sar"
                                 className="absolute inset-0 w-full h-full border-0"
